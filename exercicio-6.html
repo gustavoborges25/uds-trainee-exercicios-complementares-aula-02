@@ -1,0 +1,39 @@
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercicio 6</title>
+    </head>
+    <body>
+        <p>6 - Escreva uma função para calcular e alertar o número de lâmpadas necessárias para iluminar um determinado cômodo de
+             uma residência. Dados de entrada: a potência da lâmpada utilizada (em watts), as dimensões (largura e comprimento, em metros)
+             do cômodo. Considere que a potência necessária é de 18 watts por metro quadrado. As entradas devem ser inputadas via
+             prompt e nãp devem aceitar valores não numéricos.</p>
+
+        <script>
+
+            function CalculaLampadasNecessarias( potencia, largura, comprimento ){
+
+                var metrosQuadrados = largura * comprimento;
+                var numeroLampadas =  metrosQuadrados * 18 / potencia;
+
+                numeroLampadas = Math.round( numeroLampadas );
+
+                if ( numeroLampadas === 0 ) {
+                    numeroLampadas = 1;
+                }
+                return alert( "Sera(ão) necessária(s) " + numeroLampadas + " lâmpadas." )
+            }
+
+            function VerificaSeNumerico( valor ){
+                return typeof valor === "number";
+            }
+
+            var potenciaDigitada = prompt( "Digite a potencia: " );
+            var numeroDigitado = prompt( "Digite a potencia: " );
+
+
+
+        </script>
+
+    </body>
+</html>

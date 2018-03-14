@@ -1,0 +1,27 @@
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercicio 3</title>
+    </head>
+    <body>
+        <p>3 - Escreva uma função que receba um número, via prompt, e alerte se o número é par ou impar.</p>
+
+        <script>
+
+            function VerificaSeParOuImpar( numero ){
+                if ( numero % 2 === 0 ) {
+                    return "Número PAR";
+                }
+                return "Número IMPAR";
+            }
+            // pelo que pesquisei rapidamente, numeros negativos também podem ser par ou impar.
+
+            var numeroDigitado = prompt( "Digite um número: " );
+            numeroDigitado = parseInt( numeroDigitado );
+
+            alert( VerificaSeParOuImpar( numeroDigitado ) );
+
+        </script>
+
+    </body>
+</html>
