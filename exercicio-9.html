@@ -1,0 +1,29 @@
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercicio 9</title>
+    </head>
+    <body>
+        <p>9 - Escreva uma função para ler 2 valores, o sistema deve validar e não permitir valores iguais, e então alertar o maior deles..</p>
+
+        <script>
+            function MostraNumeroMaior( primeiroNumero, segundoNumero ){
+
+                if ( primeiroNumero === segundoNumero ) {
+                    return alert( "Números iguais! - Não é possível." );
+                } else if ( primeiroNumero > segundoNumero ) {
+                    return alert( "Primeiro número informado ( " + primeiroNumero + " ) é o maior!" );
+                }
+                return alert( "Segundo número informado ( " + segundoNumero + " ) é o maior!" );
+            }
+
+            var primeiroNumero    = prompt( "Digite um número: "  );
+            primeiroNumero          = parseInt( primeiroNumero );
+            var segundoNumero    = prompt( "Digite outro número: "  );
+            segundoNumero          = parseInt( segundoNumero );
+            MostraNumeroMaior( primeiroNumero, segundoNumero );
+
+        </script>
+
+    </body>
+</html>

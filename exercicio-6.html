@@ -10,9 +10,7 @@
              prompt e nãp devem aceitar valores não numéricos.</p>
 
         <script>
-
             function CalculaLampadasNecessarias( potencia, largura, comprimento ){
-
                 var metrosQuadrados = largura * comprimento;
                 var numeroLampadas =  metrosQuadrados * 18 / potencia;
 
@@ -20,18 +18,24 @@
 
                 if ( numeroLampadas === 0 ) {
                     numeroLampadas = 1;
-                }
-                return alert( "Sera(ão) necessária(s) " + numeroLampadas + " lâmpadas." )
+                } //usei o criterio de pelo menos uma lampada independente se o espaço for bem pequeno.
+                return alert( "Será(ão) necessária(s) " + numeroLampadas + " lâmpada(s)." )
             }
-
             function VerificaSeNumerico( valor ){
-                return typeof valor === "number";
+               return !isNaN( parseFloat( valor ) ) && isFinite( valor );
             }
 
-            var potenciaDigitada = prompt( "Digite a potencia: " );
-            var numeroDigitado = prompt( "Digite a potencia: " );
+            var potenciaDigitada    = prompt( "Digite a potencia: "    );
+            var larguraDigitada     = prompt( "Digite a largura: "     );
+            var comprimentoDigitado = prompt( "Digite o comprimento: " );
 
-
+            if ( !VerificaSeNumerico( potenciaDigitada ) ||
+                 !VerificaSeNumerico( larguraDigitada ) ||
+                 !VerificaSeNumerico( comprimentoDigitado ) ) {
+                    alert( "Atenção: Digite somente números !" );
+            } else {
+               CalculaLampadasNecessarias( potenciaDigitada, larguraDigitada, comprimentoDigitado );
+            }
 
         </script>
 

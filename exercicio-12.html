@@ -1,0 +1,68 @@
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercicio 12</title>
+    </head>
+    <body>
+        <p>12 - Para cada conjunto de valores abaixo, escreva o código, usando laço(s), que preencha um array com os valores:
+                    10 9 8 7 6 5 4 3 2 1
+                    0 1 4 9 16 25 36 49 64 81 100
+                    1 2 3 4 5 10 20 30 40 50
+                    3 4 7 12 19 28 39 52 67 84</p>
+
+        <script>
+            function PrimeiroConjunto( arrayNumeros ){
+                for ( var i = 10; i >= 1; i-- ) {
+                    arrayNumeros.push( i );
+                }
+            }
+
+            function SegundoConjunto( arrayNumeros ){
+                var contadorAuxiliar = 0;
+                var incrementador = 1;
+
+                while ( contadorAuxiliar <= 100 ) {
+                    arrayNumeros.push( contadorAuxiliar );
+                        contadorAuxiliar += incrementador;
+                        incrementador += 2
+                }
+            }
+
+            function TerceiroConjunto( arrayNumeros ){
+                for ( var i = 1; i <= 5; i++ ) {
+                    arrayNumeros.push( i );
+                }
+                for ( var i = 10; i <= 50; i += 10 ) {
+                    arrayNumeros.push( i );
+                }
+            }
+
+            function QuartoConjunto( arrayNumeros ){
+                var contadorAuxiliar = 3;
+                var incrementador = 1;
+
+                while ( contadorAuxiliar <= 84 ) {
+                    arrayNumeros.push( contadorAuxiliar );
+                        contadorAuxiliar += incrementador;
+                        incrementador += 2
+                }
+            }
+
+            var array1 = [];
+            var array2 = [];
+            var array3 = [];
+            var array4 = [];
+            PrimeiroConjunto( array1 );
+            SegundoConjunto( array2 );
+            TerceiroConjunto( array3 );
+            QuartoConjunto( array4 );
+
+            console.log( array1 );
+            console.log( array2 );
+            console.log( array3 );
+            console.log( array4 );
+
+        </script>
+
+    </body>
+</html>

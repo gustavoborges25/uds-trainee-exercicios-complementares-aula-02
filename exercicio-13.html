@@ -1,0 +1,42 @@
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercicio 13</title>
+    </head>
+    <body>
+        <p>13 -Usando o objeto Date, crie um script que apresente a data no formato: dd/mm/aaaa.</p>
+
+        <script>
+
+            var dataAtual = new Date().toLocaleDateString();
+            alert( dataAtual );
+
+            //ou
+
+            function dataAtualFormatada(){
+                var data = new Date();
+
+                var dia = data.getDate();
+                if ( dia.toString().length == 1 ){
+                    dia = "0" + dia;
+                }
+
+                var mes = data.getMonth() + 1 ;
+                if ( mes.toString().length == 1 ){
+                    mes = "0" + mes;
+                }
+
+                var ano = data.getFullYear();
+
+                return dia + "/" + mes + "/" + ano;
+            }
+
+            alert( dataAtualFormatada() );
+
+            // pelo que entendi na primeira forma o metodo "toLocaleDateString()'' busca a data de acordo com o padrão utilizado na localização do servidor, o que não seria o ideal, então o segundo formato
+            // parece ser mais garantido.
+
+        </script>
+
+    </body>
+</html>

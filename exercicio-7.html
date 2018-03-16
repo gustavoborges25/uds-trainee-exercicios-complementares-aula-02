@@ -1,0 +1,25 @@
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercicio 7</title>
+    </head>
+    <body>
+        <p>6 - Escreva uma função para ler um valor, via prompt, e alertar se é positivo ou negativo. Considere o valor zero como positivo.</p>
+
+        <script>
+            function VericaSeNumeroPositivo( numero ){
+               if ( numero >= 0 ) {
+                  return alert( "Número POSITIVO !" );
+               }
+               return alert( "Número NEGATIVO !" );
+            }
+
+            var numeroDigitado = prompt( "Digite um número: " );
+            numeroDigitado     = parseInt( numeroDigitado     );
+
+            VericaSeNumeroPositivo( numeroDigitado );
+
+        </script>
+
+    </body>
+</html>
